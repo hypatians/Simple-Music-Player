@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #0000cd;
+            color: white;
+        }
+        .button {
+            background-color: #00ff00;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #00b200;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to the Simple Music Player!</h1>
+
+<!-- Audio element -->
+<audio id="audioPlayer" controls>
+    <source src="Fikret_Kizilok_-_Ben_Gidersem.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<br>
+
+<!-- Control buttons -->
+<button class="button" onclick="playMusic()">Play</button>
+<button class="button" onclick="pauseMusic()">Pause</button>
+<button class="button" onclick="stopMusic()">Stop</button>
+
+<!-- Aşık Veysel Quote -->
+<p>"Oh Saz when I go you will stay in the world. Please let not my deepest secrets be revealed." - Aşık Veysel Şatıroğlu</p>
+
+<!-- JavaScript functions -->
+<script>
+    const audioPlayer = document.getElementById('audioPlayer');
+
+    function playMusic() {
+        audioPlayer.play();
+    }
+
+    function pauseMusic() {
+        audioPlayer.pause();
+    }
+
+    function stopMusic() {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+    }
+</script>
+
+</body>
+</html>
